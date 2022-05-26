@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Console</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+                La idea de esta sección es que pruebes de una forma muy sencilla 
+                las diferentes formas de definir funciones
+                y ejecutarlas con un valor de retorno
+            */
+            //  -------  FORMA 1 ------------------------
+            
+            
+            function f1(name = 'World') {
+                console.log('Hello ' + name)
+            }
+
+            f1()
+            f1('Cristina')
+
+            function sum(a, b) {
+                console.log(a + b)
+            }
+
+            sum(2, 5)
+            sum(10, 5)
+            sum(20, 50)
+            sum(3, 8)
+
+
+
+
+            // -----  FORMA 2 -----------------------
+
+
+            function f2(name = 'world') {
+                return `Hello ${name}`;
+            }
+
+            console.log(f2())
+            console.log(f2('Cristina'))
+
+
+
+            // -----  FORMA 3 -----------------------
+
+            var f3 = function(name = 'world') {
+                return `Hello ${name}`
+            }
+
+            console.log(f3())
+            console.log(f3('Cristina'))
+
+            
+            // -----  FORMA 4 -----------------------
+
+
+            var sayHello = (name) => `Hello ${name}`
+            var sayBye = (name) => {
+                return `Bye ${name}`
+            }
+
+            console.log(sayHello('Cris')) 
+            console.log(sayBye('Cris'))
+
+        </script>
+    </body>
+</html>
